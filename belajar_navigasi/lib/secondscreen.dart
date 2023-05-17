@@ -1,21 +1,29 @@
 import 'package:flutter/material.dart';
 
 class SecondScreen extends StatelessWidget {
-  const SecondScreen({super.key});
+  final String data;
+  const SecondScreen({super.key, required this.data});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blue,
-        title: Text('Layar Kedua'),
+        backgroundColor: Colors.red,
+        title: const Text('Layar Kedua'),
       ),
       body: Center(
-        child: ElevatedButton(
-          onPressed: (){},
-          child: Text('kembali'),
-           ),
-        ),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            ElevatedButton(
+              child: const Text('kembali'),
+              onPressed: (){
+                Navigator.pop(context);
+              }
+            )
+          ],
+        )
+      ),
     );
   }
 }

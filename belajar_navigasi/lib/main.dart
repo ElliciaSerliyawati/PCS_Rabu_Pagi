@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:belajar_navigasi/firstscreen.dart';
+import 'package:belajar_navigasi/routes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: FirstScreen(),
+      onGenerateRoute: RouteGenerator.generateRoute,
     );
   }
 }
